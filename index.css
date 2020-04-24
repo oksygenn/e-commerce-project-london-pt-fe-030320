@@ -2,6 +2,7 @@
   font-size: 16px;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 a,
 li,
@@ -64,7 +65,7 @@ body {
 }
 
 .product {
-  margin: 0 0 1.5em 2em;
+  margin: 0 0 3em 2em;
   position: relative;
 }
 
@@ -73,26 +74,21 @@ body {
   width: 180px;
   height: 5em;
   left: 0;
-  top: 210px;
+  top: 65%;
   background-color: white;
   padding-top: 1.2em;
-}
-
-.product-name > h2 {
-  position: relative;
-  /* top: 2em; */
 }
 
 .product-price {
   position: absolute;
   right: 0;
-  top: 250px;
+  top: 77%;
 }
 
 .product-add-to-cart > img {
   position: absolute;
   right: 0;
-  bottom: 0.5em;
+  bottom: 0;
 }
 
 .product-image img {
