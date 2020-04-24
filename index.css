@@ -1,8 +1,8 @@
 * {
-  font-size: 16px;
+  /* font-size: 16px; */
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 a,
 li,
@@ -14,20 +14,71 @@ body {
   background: #ffffff;
   font-family: Avenir, Verdana, Arial;
   font-style: normal;
-  /* font-weight: 800; */
-  font-size: 1.2em;
+  max-width: 1400px;
+  margin: 0 auto;
+  /* font-size: 1.2em; */
 }
 
 /* ============================= PLP =============================== */
-.wrapper {
-  display: flex;
-  margin: 2em 2.5em 2em 3.6em;
+
+section {
+  display: grid;
+  grid-template-columns: 25% auto;
+  margin: 3em 2.5em 2em 3.6em;
+}
+aside {
+  max-width: 300px;
+  /* margin-right: 1em; */
+  padding-right: 1vw;
+  background-color: violet;
+}
+.products {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1.5em;
+}
+.product {
+  /* position: relative; */
+  min-width: 200px;
+}
+.product-image {
+  /* position: relative; */
+  width: 100%;
+  /* margin-bottom: -3em; */
 }
 
-.sidebar {
-  /* background-color: green; */
-  width: 28em;
+.product-name {
+  /* margin-top: -1em; */
+  /* position: absolute; */
+  /* top: 70%; */
+  background-color: cyan;
 }
+/* .product-info {
+  position: relative;
+  background-color: beige;
+} */
+/* h4 {
+  position: absolute;
+  top: 70%;
+  background-color: yellow;
+  width: 70%;
+} */
+.product-extra-info {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: gray; */
+}
+.product-add-to-cart {
+  display: flex;
+  justify-content: flex-end;
+  background-color: white;
+  padding-top: 1em;
+}
+
+/* .sidebar {
+  background-color: green;
+  width: 28em;
+} */
 
 .line {
   border-bottom: 2px solid #f2f2f2;
@@ -58,7 +109,7 @@ body {
   top: 0.5em;
 }
 
-.products-container {
+/* .products-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
@@ -67,9 +118,9 @@ body {
 .product {
   margin: 0 0 3em 2em;
   position: relative;
-}
+} */
 
-.product-name {
+/* .product-name {
   position: absolute;
   width: 180px;
   height: 5em;
@@ -95,7 +146,7 @@ body {
   width: 275px;
   height: 235px;
   margin-bottom: 5.1em;
-}
+}  */
 
 /* ============================= PLP ============================== */
 
