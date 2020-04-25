@@ -2,9 +2,9 @@ const header = `
     <nav>
           <ul class="header-left">
             <li><img class="logo" src="images/Logo.png" alt="logo" /></li>
-            <li class="list-item"><a href="#" id="home">HOME</a></li>
-            <li class="list-item"><a href="#" id="shop">SHOP</a></li>
-            <li class="list-item"><a href="#" id="magazine">MAGAZINE</a></li>
+            <li><a href="#" id="home">HOME</a></li>
+            <li><a href="#" id="shop">SHOP</a></li>
+            <li><a href="#" id="magazine class="gray-text">Magazine</a></li>
           </ul>
     </nav>
       

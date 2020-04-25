@@ -24,7 +24,7 @@
 
     <section>
       <aside>
-        <span class="sidebar-filter-text">Filter by</span>
+        <span class="gray-text">Filter by</span>
 
         <div class="collection-filter">
           <p>Collection</p>
@@ -37,35 +37,57 @@
           <img class="filter-arrow-btn" src="images/filter_arrow.png" alt="" />
           <div class="line"></div>
           <input type="checkbox" id="gray" name="color" />
-          <label for="gray"> Gray</label><br />
-          <input type="checkbox" id="brown" name="color" />
-          <label for="brown"> Brown</label><br />
+          <label for="grey"> Grey</label><br />
+          <input type="checkbox" id="violet" name="color" />
+          <label for="violet"> Violet</label><br />
           <input type="checkbox" id="black" name="color" />
           <label for="black"> Black</label><br />
-          <input type="checkbox" id="blue" name="color" />
-          <label for="blue"> Blue</label><br />
-          <input type="checkbox" id="beige" name="color" />
-          <label for="beige"> Beige</label><br />
+          <input type="checkbox" id="ivory" name="color" />
+          <label for="ivory"> Ivory</label><br />
+          <input type="checkbox" id="yellow" name="color" />
+          <label for="yellow"> Yellow</label><br />
           <input type="checkbox" id="green" name="color" />
           <label for="green"> Green</label><br />
-          <input type="checkbox" id="red" name="color" />
-          <label for="red"> Red</label><br />
-          <input type="checkbox" id="gold" name="color" />
-          <label for="gold"> Gold</label><br />
+          <input type="checkbox" id="tan" name="color" />
+          <label for="tan"> Tan</label><br />
+          <input type="checkbox" id="salmon" name="color" />
+          <label for="salmon"> Salmon</label><br />
+          <input type="checkbox" id="purple" name="color" />
+          <label for="purple"> Purple</label><br />
+          <input type="checkbox" id="lime" name="color" />
+          <label for="lime"> Lime</label><br />
+          <input type="checkbox" id="magenta" name="color" />
+          <label for="magenta"> Magenta</label>
         </div>
 
         <div class="category-filter">
           <p>Category</p>
           <img class="filter-arrow-btn" src="images/filter_arrow.png" alt="" />
+          <div class="line"></div>
+
+          <input type="checkbox" id="table" name="category" />
+          <label for="table"> Table</label><br />
+          <input type="checkbox" id="sofa" name="category" />
+          <label for="sofa"> Sofa</label><br />
+          <input type="checkbox" id="chair" name="category" />
+          <label for="chair"> Chair</label><br />
+          <input type="checkbox" id="bed" name="category" />
+          <label for="bed"> Bed</label>
         </div>
         <div class="line"></div>
         <div class="price-filter">
           <p>Price Range</p>
-          <div class="slider">
-            <input type="range" min="" max="" value="" class="" id="" />
+          <div class="slider-container">
+            <input
+              type="range"
+              min="1"
+              max="1000"
+              value=""
+              class="slider"
+              id=""
+            />
           </div>
         </div>
-        <div class="line"></div>
       </aside>
 
       <div class="container">
@@ -82,7 +104,7 @@
                 <h4>Druid</h4>
               </div>
               <div class="product-extra-info">
-                <p>Sofa</p>
+                <p class="gray-text">Sofa</p>
                 <p>$1,345</p>
               </div>
             </div>
@@ -100,10 +122,10 @@
             <div class="product-info">
               <div class="product-name">
                 <h4>Druid</h4>
-                <div class="product-extra-info">
-                  <p>Sofa</p>
-                  <p>$1,345</p>
-                </div>
+              </div>
+              <div class="product-extra-info">
+                <p class="gray-text">Sofa</p>
+                <p>$1,345</p>
               </div>
             </div>
             <div class="product-add-to-cart">
@@ -120,10 +142,10 @@
             <div class="product-info">
               <div class="product-name">
                 <h4>Druid</h4>
-                <div class="product-extra-info">
-                  <p>Sofa</p>
-                  <p>$1,345</p>
-                </div>
+              </div>
+              <div class="product-extra-info">
+                <p class="gray-text">Sofa</p>
+                <p>$1,345</p>
               </div>
             </div>
             <div class="product-add-to-cart">
@@ -140,29 +162,10 @@
             <div class="product-info">
               <div class="product-name">
                 <h4>Druid</h4>
-                <div class="product-extra-info">
-                  <p>Sofa</p>
-                  <p>$1,345</p>
-                </div>
               </div>
-            </div>
-            <div class="product-add-to-cart">
-              <a href=""><img src="images/add-to-cart-button.png" alt="" /></a>
-            </div>
-          </div>
-          <div class="product">
-            <img
-              class="product-image"
-              src="images/product-image-1.jpg"
-              alt="picture of a bedroom"
-            />
-            <div class="product-info">
-              <div class="product-name">
-                <h4>Druid</h4>
-                <div class="product-extra-info">
-                  <p>Sofa</p>
-                  <p>$1,345</p>
-                </div>
+              <div class="product-extra-info">
+                <p class="gray-text">Sofa</p>
+                <p>$1,345</p>
               </div>
             </div>
             <div class="product-add-to-cart">
@@ -179,10 +182,30 @@
             <div class="product-info">
               <div class="product-name">
                 <h4>Druid</h4>
-                <div class="product-extra-info">
-                  <p>Sofa</p>
-                  <p>$1,345</p>
-                </div>
+              </div>
+              <div class="product-extra-info">
+                <p class="gray-text">Sofa</p>
+                <p>$1,345</p>
+              </div>
+            </div>
+            <div class="product-add-to-cart">
+              <a href=""><img src="images/add-to-cart-button.png" alt="" /></a>
+            </div>
+          </div>
+
+          <div class="product">
+            <img
+              class="product-image"
+              src="images/product-image-1.jpg"
+              alt="picture of a bedroom"
+            />
+            <div class="product-info">
+              <div class="product-name">
+                <h4>Druid</h4>
+              </div>
+              <div class="product-extra-info">
+                <p class="gray-text">Sofa</p>
+                <p>$1,345</p>
               </div>
             </div>
             <div class="product-add-to-cart">
@@ -191,11 +214,11 @@
           </div>
         </div>
         <ul class="pagination">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
+          <li class="page">1</li>
+          <li class="page">2</li>
+          <li class="page">3</li>
+          <li class="page">4</li>
+          <li class="page">5</li>
         </ul>
       </div>
       <!-- products container-->
