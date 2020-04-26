@@ -2,9 +2,11 @@ const visibleOnPage = 6;
 const numberOfPages = Math.ceil(PRODUCTS.length / visibleOnPage);
 
 let currentPage = 0;
+let sortBy = "best-match";
 
 const setup = () => {
   setupPagination();
+  setupSort();
   renderProducts();
 };
 
@@ -22,8 +24,27 @@ const setupPagination = () => {
   }
 };
 
+const setupSort = () => {
+  const sortSelect = document.querySelector("#sorting");
+  sortSelect.addEventListener("change", () => {
+    sortBy = sortSelect.value;
+    renderProducts();
+  });
+};
+
 const renderProducts = () => {
-  const sortedProducts = PRODUCTS;
+  let sortedProducts = PRODUCTS;
+  switch (sortBy) {
+    case "low-to-high":
+      sortedProducts = sortedProducts.sort((a, b) => a.price - b.price);
+      break;
+    case "high-to-low":
+      sortedProducts = sortedProducts.sort((a, b) => b.price - a.price);
+      break;
+    default:
+      break;
+  }
+
   const beginProductIndex = currentPage * visibleOnPage;
   const endProductIndex = beginProductIndex + visibleOnPage;
   const currentPageProducts = sortedProducts.slice(
@@ -47,7 +68,7 @@ const renderProducts = () => {
     productType.innerText = product.type;
     const productPrice = productDiv.querySelector(".product-price");
     productPrice.innerText = `$${product.price}`;
-    // TODO: alt, h4 for name, images
+    // TODO: alt, h4 for name, images, a link to pdp
     productsContainer.appendChild(productDiv);
   }
 };
