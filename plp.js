@@ -46,8 +46,8 @@ const renderProducts = () => {
     const productType = productDiv.querySelector(".product-type");
     productType.innerText = product.type;
     const productPrice = productDiv.querySelector(".product-price");
-    productPrice.innerText = product.price;
-
+    productPrice.innerText = `$${product.price}`;
+    // TODO: alt, h4 for name, images
     productsContainer.appendChild(productDiv);
   }
 };
