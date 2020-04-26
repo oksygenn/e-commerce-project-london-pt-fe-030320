@@ -9,10 +9,21 @@
 
   <body>
     <header></header>
+
     <main class="main-pdp">
       <div class="pdp-wrapper">
-        <div class="pdp-carousel-container">
-          <img src="images/PDP-sofa.jpg" />
+        <div class="pdp-images-container">
+          <div class="pdp-carousel">
+            <img src="images/PDP-sofa.jpg" />
+          </div>
+          <div class="pdp-small-images">
+            <img class="pdp-arrow" src="./images/arrow-left.png" alt="" />
+            <img src="./images/pdp-small-couch-1.png" alt="" />
+            <img src="./images/pdp-small-couch-2.png" alt="" />
+            <img src="./images/pdp-small-couch-3.png" alt="" />
+            <img src="./images/pdp-small-couch-4.png" alt="" />
+            <img class="pdp-arrow" src="./images/arrow-right.png" alt="" />
+          </div>
         </div>
         <div class="pdp-product-description">
           <div class="pdp-description">
@@ -21,27 +32,24 @@
               Rustic bleeding-edge cultivate e-services mission-critical
               transition vortals
             </p>
-            <p class="pdp-product-price">$4567</p>
-            <p class="dispatch-info">Dispatched in 2 - 3 weeks</p>
-            <p>Only <span class="red-text">4 left</span></p>
+            <p class="pdp-product-price">$90</p>
+            <p class="pdp-dispatch-info">
+              Dispatched in 2 - 3 weeks
+              <span>Only <span class="pdp-red-text">4 left</span></span>
+            </p>
           </div>
-          <div class="pdp-colors">
-            <div class="color color1"></div>
-            <div class="color color2"></div>
-            <div class="color color3"></div>
-            <div class="color color4"></div>
-          </div>
+          <ul class="pdp-colors">
+            <li class="color color1"></li>
+            <li class="color color2"></li>
+            <li class="color color3"></li>
+            <li class="color color4"></li>
+          </ul>
           <div class="pdp-buttons">
-            <button>Add to basket</button>
+            <button class="pdp-add-to-cart-button">Add to basket</button>
             <div class="pdp-details">
-              <div class="pdp-details-button">
-                <p>Details</p>
-                <img
-                  class="pdp-arrow-btn"
-                  src="images/filter_arrow.png"
-                  alt=""
-                />
-              </div>
+              <button class="pdp-details-button">
+                Details
+              </button>
               <ul class="pdp-details-text pdp-smaller-text">
                 <li>Dimensions</li>
                 <li>Seat dimensions</li>
