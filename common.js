@@ -16,6 +16,7 @@ const header = `
                 src="images/cart_button.png"
                 alt="cart logo"
               />
+              <div id="cartQuantity" class="hidden"></div>
             </li>
             <li><a id="login" href="#">Login</a></li>
         </ul>
@@ -53,11 +54,11 @@ const footer = `
           </ul>
 </div>`;
 
-document.querySelector("header").innerHTML = header;
-document.querySelector("footer").innerHTML = footer;
-
-const home = document.querySelector("#home");
-const shop = document.querySelector("#shop");
+const commonSetup = () => {
+  document.querySelector("header").innerHTML = header;
+  document.querySelector("footer").innerHTML = footer;
+  renderCart();
+};
 
 const setupArrowButtons = () => {
   let arrowDivs = document.querySelectorAll(".filter-arrow-btn");
@@ -69,3 +70,22 @@ const setupArrowButtons = () => {
     });
   });
 };
+
+// local storage
+const localStorage = window.localStorage;
+
+const addToCart = () => {
+  let itemsInCart = parseInt(localStorage.getItem("cart") || 0);
+  localStorage.setItem("cart", itemsInCart + 1);
+  renderCart();
+};
+
+const renderCart = () => {
+  const itemsInCart = parseInt(localStorage.getItem("cart") || 0);
+  if (itemsInCart < 1) return;
+  const cartDiv = document.querySelector("#cartQuantity");
+  cartDiv.classList.remove("hidden");
+  cartDiv.innerHTML = itemsInCart;
+};
+
+commonSetup();

@@ -95,22 +95,31 @@ const renderProducts = () => {
   oldProducts.forEach((node) => node.remove());
 
   for (const product of currentPageProducts) {
-    let productDiv = productTemplate.cloneNode(true);
-    productDiv.classList.remove("template");
-    productDiv.classList.add("rendered");
-    const productName = productDiv.querySelector(".product-name");
-    productName.innerText = product.name;
-    const productType = productDiv.querySelector(".product-type");
-    productType.innerText = product.type;
-    const productPrice = productDiv.querySelector(".product-price");
-    productPrice.innerText = `$${product.price}`;
-    const productImage = productDiv.querySelector(".product-image");
-    productImage.src = product.image;
-    // TODO: alt, h4 for name, a link to pdp
+    const productDiv = createProductDiv(productTemplate, product);
     productsContainer.appendChild(productDiv);
   }
 
   renderPagination(sortedProducts);
+};
+
+const createProductDiv = (template, product) => {
+  let productDiv = template.cloneNode(true);
+  productDiv.classList.remove("template");
+  productDiv.classList.add("rendered");
+  const productName = productDiv.querySelector(".product-name");
+  productName.innerText = product.name;
+  const productType = productDiv.querySelector(".product-type");
+  productType.innerText = product.type;
+  const productPrice = productDiv.querySelector(".product-price");
+  productPrice.innerText = `$${product.price}`;
+  const productImage = productDiv.querySelector(".product-image");
+  productImage.src = product.image;
+  const productCart = productDiv.querySelector(".product-add-to-cart");
+  productCart.addEventListener("click", () => {
+    addToCart(product);
+  });
+  // TODO: alt, h4 for name, a link to pdp
+  return productDiv;
 };
 
 const renderPagination = (products) => {
