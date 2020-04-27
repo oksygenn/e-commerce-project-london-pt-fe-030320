@@ -51,7 +51,7 @@ const setupColorFilter = () => {
 };
 
 const renderProducts = () => {
-  let sortedProducts = PRODUCTS;
+  let sortedProducts = PRODUCTS.slice();
   switch (sortBy) {
     case "low-to-high":
       sortedProducts = sortedProducts.sort((a, b) => a.price - b.price);
@@ -86,7 +86,9 @@ const renderProducts = () => {
     productType.innerText = product.type;
     const productPrice = productDiv.querySelector(".product-price");
     productPrice.innerText = `$${product.price}`;
-    // TODO: alt, h4 for name, images, a link to pdp
+    const productImage = productDiv.querySelector(".product-image");
+    productImage.src = product.image;
+    // TODO: alt, h4 for name, a link to pdp
     productsContainer.appendChild(productDiv);
   }
 };

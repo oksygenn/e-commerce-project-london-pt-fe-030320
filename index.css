@@ -38,6 +38,7 @@ section {
 
 .product {
   position: relative;
+  max-width: 250px;
   min-width: 170px;
   padding-bottom: 2em;
 }
@@ -156,8 +157,8 @@ input[type="checkbox"] {
   display: inline-block;
   margin: 3em;
   padding: 2px 7px 2px 7px;
-  background-color: #00c98d;
-  color: white;
+  /* background-color: #00c98d; */
+  /* color: white; */
 }
 
 /* ============================= PLP =============================== */
