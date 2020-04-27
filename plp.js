@@ -3,11 +3,13 @@ const numberOfPages = Math.ceil(PRODUCTS.length / visibleOnPage);
 
 let currentPage = 0;
 let sortBy = "best-match";
+let colorFilters = [];
 
 const setup = () => {
   setupPagination();
   setupSort();
   setupArrowButtons();
+  setupColorFilter();
   renderProducts();
 };
 
@@ -30,6 +32,21 @@ const setupSort = () => {
   sortSelect.addEventListener("change", () => {
     sortBy = sortSelect.value;
     renderProducts();
+  });
+};
+
+const setupColorFilter = () => {
+  const filterInputs = document.querySelectorAll(".color-filter input");
+  filterInputs.forEach((input) => {
+    input.addEventListener("change", () => {
+      if (input.checked) {
+        colorFilters.push(input.id);
+      } else {
+        const index = colorFilters.indexOf(input.id);
+        colorFilters.splice(index, 1);
+      }
+      renderProducts();
+    });
   });
 };
 
