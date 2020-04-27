@@ -79,9 +79,24 @@
         </div>
 
         <section class="range-slider">
-          <span class="rangeValues"></span>
-          <input value="5" min="0" max="100" step="5" type="range" />
-          <input value="10" min="0" max="100" step="5" type="range" />
+          <input
+            value="0"
+            min="0"
+            max="1000"
+            step="10"
+            type="range"
+            class="slider-min"
+          />
+          <input
+            value="1000"
+            min="0"
+            max="1000"
+            step="10"
+            type="range"
+            class="slider-max"
+          />
+          <span class="slider-min-text"></span>
+          <span class="slider-max-text"></span>
         </section>
 
         <!-- <div class="price-filter">
