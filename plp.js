@@ -5,32 +5,11 @@ let currentPage = 0;
 let sortBy = "best-match";
 
 const setup = () => {
-  setupPagination();
   setupSort();
   setupArrowButtons();
   setupColorFilter();
   setupCategoryFilter();
   renderProducts();
-};
-
-const setupPagination = () => {
-  const numberOfPages = Math.ceil(PRODUCTS.length / visibleOnPage);
-  const paginationUL = document.querySelector(".pagination");
-  for (let page = 0; page < numberOfPages; page++) {
-    const li = document.createElement("li");
-    li.className = "page";
-    li.innerText = page + 1;
-
-    li.addEventListener("click", () => {
-      currentPage = page;
-      if (currentPage === page) {
-        li.classList.remove("page-active");
-        li.classList.add("page-active");
-      }
-      renderProducts();
-    });
-    paginationUL.appendChild(li);
-  }
 };
 
 const setupSort = () => {
@@ -51,6 +30,7 @@ const setupColorFilter = () => {
         const index = colorFilters.indexOf(input.id);
         colorFilters.splice(index, 1);
       }
+      currentPage = 0;
       renderProducts();
     });
   });
@@ -66,6 +46,7 @@ const setupCategoryFilter = () => {
         const index = categoryFilters.indexOf(input.id);
         categoryFilters.splice(index, 1);
       }
+      currentPage = 0;
       renderProducts();
     });
   });
@@ -127,6 +108,30 @@ const renderProducts = () => {
     productImage.src = product.image;
     // TODO: alt, h4 for name, a link to pdp
     productsContainer.appendChild(productDiv);
+  }
+
+  renderPagination(sortedProducts);
+};
+
+const renderPagination = (products) => {
+  const numberOfPages = Math.ceil(products.length / visibleOnPage);
+  const paginationUL = document.querySelector(".pagination");
+  paginationUL.querySelectorAll("li").forEach((li) => li.remove());
+
+  for (let page = 0; page < numberOfPages; page++) {
+    const li = document.createElement("li");
+    li.innerText = page + 1;
+
+    li.className = "page";
+    if (currentPage === page) {
+      li.classList.add("page-active");
+    } else {
+      li.addEventListener("click", () => {
+        currentPage = page;
+        renderProducts();
+      });
+    }
+    paginationUL.appendChild(li);
   }
 };
 
