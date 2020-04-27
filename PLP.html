@@ -37,7 +37,7 @@
           <img class="filter-arrow-btn" src="images/filter_arrow.png" alt="" />
           <div class="line"></div>
           <div class="options">
-            <input type="checkbox" id="gray" name="color" />
+            <input type="checkbox" id="grey" name="color" />
             <label for="grey"> Grey</label><br />
             <input type="checkbox" id="violet" name="color" />
             <label for="violet"> Violet</label><br />
@@ -67,18 +67,24 @@
           <img class="filter-arrow-btn" src="images/filter_arrow.png" alt="" />
           <div class="line"></div>
           <div class="options">
-            <input type="checkbox" id="table" name="category" />
-            <label for="table"> Table</label><br />
-            <input type="checkbox" id="sofa" name="category" />
-            <label for="sofa"> Sofa</label><br />
-            <input type="checkbox" id="chair" name="category" />
-            <label for="chair"> Chair</label><br />
-            <input type="checkbox" id="bed" name="category" />
-            <label for="bed"> Bed</label>
+            <input type="checkbox" id="Table" name="category" />
+            <label for="Table"> Table</label><br />
+            <input type="checkbox" id="Sofa" name="category" />
+            <label for="Sofa"> Sofa</label><br />
+            <input type="checkbox" id="Chair" name="category" />
+            <label for="Chair"> Chair</label><br />
+            <input type="checkbox" id="Bed" name="category" />
+            <label for="Bed"> Bed</label>
           </div>
         </div>
 
-        <div class="price-filter">
+        <section class="range-slider">
+          <span class="rangeValues"></span>
+          <input value="5" min="0" max="100" step="5" type="range" />
+          <input value="10" min="0" max="100" step="5" type="range" />
+        </section>
+
+        <!-- <div class="price-filter">
           <p>Price Range</p>
           <div class="slider-container">
             <input
@@ -89,8 +95,8 @@
               class="slider"
               id=""
             />
-          </div>
-        </div>
+          </div> 
+        </div> -->
       </aside>
 
       <div class="container">
@@ -118,7 +124,7 @@
           <!-- product -->
         </div>
         <ul class="pagination">
-          <!-- <li class="page">1</li> -->
+          <!-- <li class="page page-active">1</li> -->
         </ul>
       </div>
       <!-- products container-->

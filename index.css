@@ -39,7 +39,7 @@ section {
 .product {
   position: relative;
   max-width: 250px;
-  min-width: 170px;
+  min-width: 150px;
   padding-bottom: 2em;
 }
 
@@ -99,8 +99,10 @@ input[type="checkbox"] {
 
 .filter-arrow-btn {
   position: absolute;
-  right: 1em;
-  top: 0.5em;
+  right: 0.5em;
+  top: 0em;
+  /* background-color: darkgreen; */
+  padding: 0.5em 0.7em 0 15em;
 }
 
 .line {
@@ -108,6 +110,9 @@ input[type="checkbox"] {
   margin-top: 1em;
 }
 
+.options {
+  margin-top: 2em;
+}
 .slider-container {
   width: 100%;
 }
@@ -151,14 +156,25 @@ input[type="checkbox"] {
 
 /* =============== pagination =============== */
 .pagination {
-  margin: 0 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  cursor: pointer;
+  /* background-color: darkgray; */
+  margin: 2em 0;
 }
 .page {
-  display: inline-block;
-  margin: 3em;
-  padding: 2px 7px 2px 7px;
-  /* background-color: #00c98d; */
-  /* color: white; */
+  margin-right: 6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-active {
+  background-color: #00c98d;
+  color: white;
+  width: 42px;
+  height: 42px;
 }
 
 /* ============================= PLP =============================== */
@@ -412,3 +428,56 @@ footer {
   font-size: 0.9em;
 }
 /* =================== header-footer for all pages ================== */
+
+section.range-slider {
+  margin: 0;
+  padding: 0;
+  background-color: darkgoldenrod;
+  position: relative;
+  width: 20vw;
+  height: 45px;
+  text-align: center;
+}
+
+section.range-slider input {
+  pointer-events: none;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 15px;
+  width: 200px;
+  outline: none;
+  height: 18px;
+  /* margin: 0;
+  padding: 0; */
+}
+
+section.range-slider input::-webkit-slider-thumb {
+  pointer-events: all;
+  position: relative;
+  z-index: 1;
+  /* outline: 0; */
+}
+
+section.range-slider input::-moz-range-thumb {
+  pointer-events: all;
+  position: relative;
+  z-index: 10;
+  -moz-appearance: none;
+  width: 9px;
+}
+
+section.range-slider input::-moz-range-track {
+  position: relative;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 1);
+  border: 0;
+}
+section.range-slider input:last-of-type::-moz-range-track {
+  -moz-appearance: none;
+  background: none transparent;
+  border: 0;
+}
+section.range-slider input[type="range"]::-moz-focus-outer {
+  border: 0;
+}

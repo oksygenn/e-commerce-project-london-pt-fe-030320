@@ -1,26 +1,32 @@
 const visibleOnPage = 6;
-const numberOfPages = Math.ceil(PRODUCTS.length / visibleOnPage);
-
+let colorFilters = [];
+let categoryFilters = [];
 let currentPage = 0;
 let sortBy = "best-match";
-let colorFilters = [];
 
 const setup = () => {
   setupPagination();
   setupSort();
   setupArrowButtons();
   setupColorFilter();
+  setupCategoryFilter();
   renderProducts();
 };
 
 const setupPagination = () => {
+  const numberOfPages = Math.ceil(PRODUCTS.length / visibleOnPage);
   const paginationUL = document.querySelector(".pagination");
   for (let page = 0; page < numberOfPages; page++) {
     const li = document.createElement("li");
     li.className = "page";
     li.innerText = page + 1;
+
     li.addEventListener("click", () => {
       currentPage = page;
+      if (currentPage === page) {
+        li.classList.remove("page-active");
+        li.classList.add("page-active");
+      }
       renderProducts();
     });
     paginationUL.appendChild(li);
@@ -50,7 +56,26 @@ const setupColorFilter = () => {
   });
 };
 
+const setupCategoryFilter = () => {
+  const categoryInputs = document.querySelectorAll(".category-filter input");
+  categoryInputs.forEach((input) => {
+    input.addEventListener("change", () => {
+      if (input.checked) {
+        categoryFilters.push(input.id);
+      } else {
+        const index = categoryFilters.indexOf(input.id);
+        categoryFilters.splice(index, 1);
+      }
+      renderProducts();
+    });
+  });
+};
+
 const renderProducts = () => {
+  // copies products, sorts if needed
+  // finds 6 products to render for current page
+  // renders 6 products
+
   let sortedProducts = PRODUCTS.slice();
   switch (sortBy) {
     case "low-to-high":
@@ -61,6 +86,18 @@ const renderProducts = () => {
       break;
     default:
       break;
+  }
+
+  if (colorFilters.length > 0) {
+    sortedProducts = sortedProducts.filter((product) => {
+      return product.colors.some((color) => colorFilters.includes(color));
+    });
+  }
+
+  if (categoryFilters.length > 0) {
+    sortedProducts = sortedProducts.filter((product) => {
+      return categoryFilters.includes(product.type);
+    });
   }
 
   const beginProductIndex = currentPage * visibleOnPage;
@@ -94,3 +131,35 @@ const renderProducts = () => {
 };
 
 setup();
+
+function getVals() {
+  // Get slider values
+  var parent = this.parentNode;
+  var slides = parent.getElementsByTagName("input");
+  var slide1 = parseFloat(slides[0].value);
+  var slide2 = parseFloat(slides[1].value);
+  // Neither slider will clip the other, so make sure we determine which is larger
+  if (slide1 > slide2) {
+    var tmp = slide2;
+    slide2 = slide1;
+    slide1 = tmp;
+  }
+
+  var displayElement = parent.getElementsByClassName("rangeValues")[0];
+  displayElement.innerHTML = slide1 + " - " + slide2;
+}
+
+window.onload = function () {
+  // Initialize Sliders
+  var sliderSections = document.getElementsByClassName("range-slider");
+  for (var x = 0; x < sliderSections.length; x++) {
+    var sliders = sliderSections[x].getElementsByTagName("input");
+    for (var y = 0; y < sliders.length; y++) {
+      if (sliders[y].type === "range") {
+        sliders[y].oninput = getVals;
+        // Manually trigger event first time to display values
+        sliders[y].oninput();
+      }
+    }
+  }
+};
