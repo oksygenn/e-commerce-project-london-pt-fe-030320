@@ -67,9 +67,14 @@ const setupSliders = () => {
   sliderMaxText.innerHTML = `$${maxValue}`;
 
   sliderMin.addEventListener("input", () => {
-    const value = sliderMin.value;
-    sliderMinText.innerHTML = `$${value}`;
-    minPrice = value;
+    const minValue = sliderMin.value;
+    const maxValue = sliderMax.value;
+    if (minValue >= maxValue - 100) {
+      sliderMin.value = maxValue - 100;
+      return;
+    }
+    sliderMinText.innerHTML = `$${minValue}`;
+    minPrice = minValue;
     renderProducts();
   });
   sliderMax.addEventListener("input", () => {
