@@ -143,6 +143,11 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
+.collapsed {
+  display: none;
+  /* add animation */
+}
+
 /* =============== pagination =============== */
 .pagination {
   margin: 0 5em;

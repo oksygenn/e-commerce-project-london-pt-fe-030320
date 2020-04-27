@@ -7,6 +7,7 @@ let sortBy = "best-match";
 const setup = () => {
   setupPagination();
   setupSort();
+  setupArrowButtons();
   renderProducts();
 };
 

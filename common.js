@@ -58,3 +58,14 @@ document.querySelector("footer").innerHTML = footer;
 
 const home = document.querySelector("#home");
 const shop = document.querySelector("#shop");
+
+const setupArrowButtons = () => {
+  let arrowDivs = document.querySelectorAll(".filter-arrow-btn");
+  arrowDivs.forEach((arrowDiv) => {
+    arrowDiv.addEventListener("click", () => {
+      const parent = arrowDiv.parentNode;
+      const optionsDiv = parent.querySelector(".options");
+      optionsDiv.classList.toggle("collapsed");
+    });
+  });
+};
