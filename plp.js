@@ -80,6 +80,7 @@ const setupSliders = () => {
     minPrice = minValue;
     renderProducts();
   });
+
   sliderMax.addEventListener("input", (event) => {
     event.preventDefault();
     const value = sliderMax.value;
@@ -160,7 +161,7 @@ const createProductDiv = (template, product) => {
   productCart.addEventListener("click", () => {
     addToCart(product);
   });
-  // TODO: alt, h4 for name, a link to pdp
+  // TODO: a link to pdp
   return productDiv;
 };
 

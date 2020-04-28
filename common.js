@@ -2,9 +2,9 @@ const header = `
     <nav>
           <ul class="header-left">
             <li><img class="logo" src="images/Logo.png" alt="logo" /></li>
-            <li><a href="#" id="home">HOME</a></li>
-            <li><a href="#" id="shop">SHOP</a></li>
-            <li><a href="#" id="magazine class="gray-text">Magazine</a></li>
+            <li><a href="main_page.html" id="home">HOME</a></li>
+            <li><a href="plp.html" id="shop">SHOP</a></li>
+            <li><a href="#" id="magazine">Magazine</a></li>
           </ul>
     </nav>
       
@@ -61,11 +61,11 @@ const commonSetup = () => {
 };
 
 const setupArrowButtons = () => {
-  let arrowDivs = document.querySelectorAll(".filter-arrow-btn");
+  let arrowDivs = document.querySelectorAll(".expandButton");
   arrowDivs.forEach((arrowDiv) => {
     arrowDiv.addEventListener("click", () => {
       const parent = arrowDiv.parentNode;
-      const optionsDiv = parent.querySelector(".options");
+      const optionsDiv = parent.querySelector(".expandable");
       optionsDiv.classList.toggle("collapsed");
     });
   });

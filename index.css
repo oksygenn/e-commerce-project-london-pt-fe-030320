@@ -190,6 +190,10 @@ input[type="checkbox"] {
   padding: 0.5em 0.7em 0 15em;
 }
 
+.expandButton,
+.expandable {
+}
+
 .line {
   border-bottom: 2px solid #f2f2f2;
   margin-top: 1em;
@@ -378,6 +382,23 @@ input[type="range"]::-webkit-slider-thumb {
   letter-spacing: 0.2em;
 }
 
+.pdp-add-to-cart-button:focus,
+.pdp-details-button:focus {
+  outline: none;
+}
+
+.green-button {
+  width: 264px;
+  height: 47px;
+  margin-top: 0.5em;
+  border: 1px solid #00c98c;
+  background-color: #00c98c;
+  color: white;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
 .pdp-details-button {
   width: 264px;
   height: 35px;
@@ -392,6 +413,8 @@ input[type="range"]::-webkit-slider-thumb {
   background-repeat: no-repeat;
 }
 
+.green-button {
+}
 /* ============================ Header-Footer for all pages ================================ */
 header a:any-link {
   color: black;
@@ -453,6 +476,10 @@ footer {
   font-size: 0.9em;
   text-transform: uppercase;
 }
+#magazine {
+  color: gray;
+}
+
 .hr-line {
   margin: 90px 57px 50px 57px;
   color: gray;
