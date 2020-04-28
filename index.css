@@ -99,15 +99,22 @@ select {
   margin: 0.4em 0;
 }
 
-.carousel img {
+.carousel > div > img {
   max-width: 100%;
   filter: brightness(80%);
 }
 
 .carousel-button {
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 45%;
+}
+
+.carousel-button.slide-previous {
+  left: 5%;
+}
+
+.carousel-button.slide-next {
+  right: 5%;
 }
 
 .slide-hidden {

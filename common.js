@@ -103,6 +103,14 @@ const setupCarousel = () => {
     if (currentSlide < 0) currentSlide = slideCount - 1;
     changeSlide();
   });
+
+  const carouselButtons = slideshow.querySelectorAll(".carousel-button");
+  slideshow.addEventListener("mouseenter", () => {
+    carouselButtons.forEach((button) => button.classList.remove("hidden"));
+  });
+  slideshow.addEventListener("mouseleave", () => {
+    carouselButtons.forEach((button) => button.classList.add("hidden"));
+  });
 };
 
 const nextSlide = () => {
