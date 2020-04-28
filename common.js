@@ -10,13 +10,13 @@ const header = `
       
     <div>
         <ul class="header-right">
-            <li>
+            <li class="cart-image">
               <img
                 class="cart-button"
                 src="images/cart_button.png"
                 alt="cart logo"
               />
-              <div id="cartQuantity" class="hidden"></div>
+              <span id="cartQuantity" class="hidden"></span>
             </li>
             <li><a id="login" href="#">Login</a></li>
         </ul>

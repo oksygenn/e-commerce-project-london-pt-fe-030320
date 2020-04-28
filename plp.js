@@ -17,7 +17,8 @@ const setup = () => {
 
 const setupSort = () => {
   const sortSelect = document.querySelector("#sorting");
-  sortSelect.addEventListener("change", () => {
+  sortSelect.addEventListener("change", (event) => {
+    event.preventDefault();
     sortBy = sortSelect.value;
     renderProducts();
   });
@@ -26,7 +27,8 @@ const setupSort = () => {
 const setupColorFilter = () => {
   const filterInputs = document.querySelectorAll(".color-filter input");
   filterInputs.forEach((input) => {
-    input.addEventListener("change", () => {
+    input.addEventListener("change", (event) => {
+      event.preventDefault();
       if (input.checked) {
         colorFilters.push(input.id);
       } else {
@@ -42,7 +44,8 @@ const setupColorFilter = () => {
 const setupCategoryFilter = () => {
   const categoryInputs = document.querySelectorAll(".category-filter input");
   categoryInputs.forEach((input) => {
-    input.addEventListener("change", () => {
+    input.addEventListener("change", (event) => {
+      event.preventDefault();
       if (input.checked) {
         categoryFilters.push(input.id);
       } else {
@@ -77,7 +80,8 @@ const setupSliders = () => {
     minPrice = minValue;
     renderProducts();
   });
-  sliderMax.addEventListener("input", () => {
+  sliderMax.addEventListener("input", (event) => {
+    event.preventDefault();
     const value = sliderMax.value;
     sliderMaxText.innerHTML = `$${value}`;
     maxPrice = value;
@@ -151,6 +155,7 @@ const createProductDiv = (template, product) => {
   productPrice.innerText = `$${product.price}`;
   const productImage = productDiv.querySelector(".product-image");
   productImage.src = product.image;
+  productImage.alt = product.type;
   const productCart = productDiv.querySelector(".product-add-to-cart");
   productCart.addEventListener("click", () => {
     addToCart(product);
