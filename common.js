@@ -88,4 +88,40 @@ const renderCart = () => {
   cartDiv.innerHTML = itemsInCart;
 };
 
+let currentSlide = 0;
+const slideCount = 4;
+
+const slideshow = document.querySelector(".slideshow");
+const slides = slideshow.querySelectorAll(".slide");
+
+const setupCarousel = () => {
+  const slideNext = slideshow.querySelector(".slide-next");
+  const slidePrevious = slideshow.querySelector(".slide-previous");
+  slideNext.addEventListener("click", nextSlide);
+  slidePrevious.addEventListener("click", () => {
+    currentSlide--;
+    if (currentSlide < 0) currentSlide = slideCount - 1;
+    changeSlide();
+  });
+};
+
+const nextSlide = () => {
+  currentSlide++;
+  if (currentSlide === slideCount) currentSlide = 0;
+  changeSlide();
+};
+
+const changeSlide = () => {
+  slides.forEach((div, index) => {
+    if (index === currentSlide) {
+      div.classList.remove("slide-disappear", "slide-hidden");
+      div.classList.add("slide-visible");
+    } else {
+      div.classList.add("slide-disappear", "slide-hidden");
+      setTimeout(() => div.classList.remove("slide-disappear"), 1000);
+      div.classList.remove("slide-visible");
+    }
+  });
+};
+
 commonSetup();
