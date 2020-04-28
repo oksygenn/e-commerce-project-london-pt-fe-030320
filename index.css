@@ -423,7 +423,7 @@ footer {
   position: relative;
   width: 20vw;
   height: 45px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .slider-container input {
@@ -433,41 +433,10 @@ footer {
   left: 0;
   top: 15px;
   width: 23vw;
-  outline: none;
   height: 18px;
 }
 
-.slider-container input::-webkit-slider-thumb {
-  pointer-events: all;
-  position: relative;
-  z-index: 1;
-  outline: 0;
-}
-
-.slider-container-moz-range-thumb {
-  pointer-events: all;
-  position: relative;
-  z-index: 10;
-  -moz-appearance: none;
-  width: 9px;
-}
-
-.slider-container input::-moz-range-track {
-  position: relative;
-  z-index: -1;
-  background-color: rgba(0, 0, 0, 1);
-  border: 0;
-}
-.slider-container input:last-of-type::-moz-range-track {
-  -moz-appearance: none;
-  background: none transparent;
-  border: 0;
-}
-.slider-container input[type="range"]::-moz-focus-outer {
-  border: 0;
-}
-
-/* input[type="range"].myslider {
+input[type="range"].myslider {
   -webkit-appearance: none;
   width: 100%;
   margin: 7px 0;
@@ -494,6 +463,9 @@ input[type="range"].myslider::-webkit-slider-thumb {
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -7px;
+  pointer-events: all;
+  position: relative;
+  z-index: 1;
 }
 input[type="range"].myslider:focus::-webkit-slider-runnable-track {
   background: rgba(128, 128, 128, 0.47);
@@ -551,4 +523,4 @@ input[type="range"].myslider:focus::-ms-fill-lower {
 }
 input[type="range"].myslider:focus::-ms-fill-upper {
   background: rgba(128, 128, 128, 0.47);
-} */
+}
