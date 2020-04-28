@@ -9,3 +9,4 @@ addToCartBtn.addEventListener("click", () => {
 });
 
 setupArrowButtons();
+setupCarousel();

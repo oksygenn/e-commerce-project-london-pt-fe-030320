@@ -95,9 +95,9 @@ const slideshow = document.querySelector(".slideshow");
 const slides = slideshow.querySelectorAll(".slide");
 
 const setupCarousel = () => {
-  const slideNext = slideshow.querySelector(".slide-next");
+  const slideNext = slideshow.querySelectorAll(".slide-next");
   const slidePrevious = slideshow.querySelector(".slide-previous");
-  slideNext.addEventListener("click", nextSlide);
+  slideNext.forEach((el) => el.addEventListener("click", nextSlide));
   slidePrevious.addEventListener("click", () => {
     currentSlide--;
     if (currentSlide < 0) currentSlide = slideCount - 1;
@@ -117,7 +117,7 @@ const changeSlide = () => {
       div.classList.remove("slide-disappear", "slide-hidden");
       div.classList.add("slide-visible");
     } else {
-      div.classList.add("slide-disappear", "slide-hidden");
+      div.classList.add("slide-hidden");
       setTimeout(() => div.classList.remove("slide-disappear"), 1000);
       div.classList.remove("slide-visible");
     }

@@ -72,7 +72,6 @@ select {
 .carousel-container {
   width: 100%;
   overflow: hidden;
-  /* box-sizing: border-box; */
 }
 
 .carousel {
@@ -313,6 +312,12 @@ input[type="range"]::-webkit-slider-thumb {
 
 .pdp-images-container {
   min-width: 400px;
+  overflow: hidden;
+}
+
+.pdp-carousel {
+  position: relative;
+  overflow: hidden;
 }
 
 .pdp-carousel > img {
