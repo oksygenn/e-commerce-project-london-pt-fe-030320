@@ -8,6 +8,10 @@
     display: none;
   }
 
+  .no-desktop {
+    display: block;
+  }
+
   .cart-image {
     position: absolute;
     right: 30%;
@@ -50,14 +54,14 @@
 
   /* ============= sorting ================= */
   .plp-mobile-sorting,
-  input[type="text"] {
+  input[type="text"],
+  .plp-mobile-filters {
     position: absolute;
     width: 100%;
-    /* left: 2.5%; */
   }
 
   .plp-mobile-sorting {
-    top: 60%;
+    top: 40%;
     background-position-x: 70vw;
     background-position-y: 2.5vh;
   }
@@ -68,11 +72,23 @@
 
   div.plp-inputs-mobile {
     position: relative;
-    height: 20vh;
+    height: 30vh;
     margin: 0 2em 0.5em 2em;
-    /* background-color: lavender; */
   }
 
+  .plp-mobile-filters {
+    top: 90%;
+    font-size: 1.3em;
+  }
+  .mobile-arrow-btn {
+    position: absolute;
+    left: 83%;
+    top: 8%;
+  }
+
+  .plp-mobile-filters p {
+    margin-left: 0.5em;
+  }
   /* ================= plp products ================*/
   section {
     margin: 0;
@@ -167,7 +183,6 @@
   /* ==================================== Mobile navigation ==========================*/
 
   .mobile-nav {
-    position: relative;
     background-color: black;
     color: white;
     position: absolute;
@@ -177,6 +192,11 @@
     top: 0;
     z-index: 111;
   }
+
+  .mobile-nav-hidden {
+    display: none;
+  }
+
   header {
     text-transform: none;
   }
@@ -190,7 +210,7 @@
     width: 25px;
   }
 
-  .logo {
+  .logo-mobile {
     margin: 1em;
     width: 35px;
     height: 25px;

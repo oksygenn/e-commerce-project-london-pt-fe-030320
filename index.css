@@ -11,6 +11,10 @@
   display: none;
 }
 
+.no-desktop {
+  display: none;
+}
+
 a,
 li,
 ul {

@@ -1,16 +1,16 @@
 const header = `
     <nav>
           <ul class="header-left">
-            <li><img class="logo" src="images/Logo.png" alt="logo" /></li>
+            <li><img class="logo hamburger" src="images/Logo.png" alt="logo" /></li>
             <li><a href="main_page.html" id="home">Home</a></li>
             <li><a href="plp.html" id="shop">Shop</a></li>
             <li><a href="#" id="magazine" class="magazine">Magazine</a></li>
           </ul>
     </nav>
-    <nav class="mobile-only mobile-nav">
+    <nav class="mobile-only mobile-nav mobile-nav-hidden">
           <ul>
-            <li><img class="logo" src="images/logo-white.png" alt="logo" /></li>
-            <li><img class="cancel-button" src="images/cancel-button-white.png" alt="logo" /></li>
+            <li><img class="logo-mobile" src="images/logo-white.png" alt="logo" /></li>
+            <li><img class="cancel-button hamburger" src="images/cancel-button-white.png" alt="logo" /></li>
             <li class="mobile-nav-item"><a href="main_page.html" id="home">Home</a></li>
             <li class="mobile-nav-item"><a href="plp.html" id="shop">Shop</a></li>
             <li class="mobile-nav-item"><a href="#" id="magazine">Magazine</a></li>
@@ -67,6 +67,7 @@ const commonSetup = () => {
   document.querySelector("header").innerHTML = header;
   document.querySelector("footer").innerHTML = footer;
   renderCart();
+  setupHamburger();
 };
 
 const setupArrowButtons = () => {
@@ -78,6 +79,16 @@ const setupArrowButtons = () => {
       optionsDiv.classList.toggle("collapsed");
     });
   });
+};
+
+const setupHamburger = () => {
+  const hamburgers = document.querySelectorAll(".hamburger");
+  const mobileNav = document.querySelector(".mobile-nav");
+  hamburgers.forEach((ham) =>
+    ham.addEventListener("click", () => {
+      mobileNav.classList.toggle("mobile-nav-hidden");
+    })
+  );
 };
 
 // local storage
