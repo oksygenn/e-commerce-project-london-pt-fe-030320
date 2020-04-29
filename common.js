@@ -2,9 +2,18 @@ const header = `
     <nav>
           <ul class="header-left">
             <li><img class="logo" src="images/Logo.png" alt="logo" /></li>
-            <li><a href="main_page.html" id="home">HOME</a></li>
-            <li><a href="plp.html" id="shop">SHOP</a></li>
-            <li><a href="#" id="magazine">Magazine</a></li>
+            <li><a href="main_page.html" id="home">Home</a></li>
+            <li><a href="plp.html" id="shop">Shop</a></li>
+            <li><a href="#" id="magazine" class="magazine">Magazine</a></li>
+          </ul>
+    </nav>
+    <nav class="mobile-only mobile-nav">
+          <ul>
+            <li><img class="logo" src="images/logo-white.png" alt="logo" /></li>
+            <li><img class="cancel-button" src="images/cancel-button-white.png" alt="logo" /></li>
+            <li class="mobile-nav-item"><a href="main_page.html" id="home">Home</a></li>
+            <li class="mobile-nav-item"><a href="plp.html" id="shop">Shop</a></li>
+            <li class="mobile-nav-item"><a href="#" id="magazine">Magazine</a></li>
           </ul>
     </nav>
       

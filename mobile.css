@@ -3,7 +3,8 @@
   aside,
   .header-left li + li,
   .main-no-sorting-mobile,
-  .hr-line {
+  .hr-line,
+  .pdp-small-images {
     display: none;
   }
 
@@ -33,12 +34,13 @@
 
   /* ============================== main page ============================= */
   .carousel {
-    margin: 5.5em 0 3em 0;
     width: 150%;
+    margin: 5.5em 0 3em 0;
+    padding: 0;
   }
 
   .carousel-text > h1 {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
   .carousel-text > p {
     font-size: 1.3em;
@@ -50,8 +52,8 @@
   .plp-mobile-sorting,
   input[type="text"] {
     position: absolute;
-    width: 80vw;
-    left: 2.5%;
+    width: 100%;
+    /* left: 2.5%; */
   }
 
   .plp-mobile-sorting {
@@ -67,7 +69,7 @@
   div.plp-inputs-mobile {
     position: relative;
     height: 20vh;
-    margin: 0 2em 3em 2em;
+    margin: 0 2em 0.5em 2em;
     /* background-color: lavender; */
   }
 
@@ -82,11 +84,12 @@
     flex-flow: column wrap;
     width: 85vw;
     justify-content: center;
-    padding: 1.5em 0 1.5em 1.7em;
+    padding: 1em 0 1.5em 1.7em;
+    margin: 0;
   }
 
   .product {
-    margin: 1em 1em 1em 1em;
+    margin: 0 1em 1em 1em;
   }
 
   .product-image {
@@ -110,8 +113,98 @@
     height: 2em;
     padding: 1em;
   }
+  /* ================================== Product details page =================================== */
 
-  /* =============================== footer ================================== */
+  .pdp-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .pdp-carousel {
+    width: 150%;
+    margin: 2em 0;
+    padding: 0;
+  }
+
+  .pdp-product-description {
+    margin: 0 3em;
+    width: 70vw;
+    text-align: left;
+  }
+
+  .pdp-smaller-text {
+    margin: 2em 0;
+  }
+
+  .pdp-details-button {
+    background-position-x: 95%;
+    background-position-y: 45%;
+  }
+
+  .mobile-only {
+    display: flex;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+  }
+
+  .mini {
+    width: 0.8em;
+    height: 0.8em;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 0 1em;
+  }
+
+  .mini1 {
+    background-color: grey;
+  }
+
+  /* ==================================== Mobile navigation ==========================*/
+
+  .mobile-nav {
+    position: relative;
+    background-color: black;
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 111;
+  }
+  header {
+    text-transform: none;
+  }
+  header .mobile-nav a:any-link {
+    color: white;
+  }
+  .cancel-button {
+    position: absolute;
+    left: 90%;
+    top: 6%;
+    width: 25px;
+  }
+
+  .logo {
+    margin: 1em;
+    width: 35px;
+    height: 25px;
+  }
+
+  ul {
+    margin: 2em;
+  }
+  li.mobile-nav-item {
+    padding: 1em;
+    font-size: 1.3em;
+  }
+
+  /* ===================================== footer ============================================ */
   footer {
     display: flex;
     flex-direction: column-reverse;

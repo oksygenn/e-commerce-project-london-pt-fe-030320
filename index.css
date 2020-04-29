@@ -5,7 +5,9 @@
 }
 
 .template,
-.hidden {
+.hidden,
+.mobile-only,
+.mobile-nav {
   display: none;
 }
 
@@ -318,7 +320,7 @@ ul.pagination {
 }
 
 .pdp-images-container {
-  min-width: 400px;
+  min-width: 60%;
   overflow: hidden;
 }
 
@@ -333,8 +335,6 @@ ul.pagination {
 
 .pdp-small-images {
   margin-top: 3em;
-  /* display: flex;
-  flex-wrap: nowrap; */
 }
 .pdp-small-images > img {
   padding-right: 1em;
@@ -506,7 +506,7 @@ footer {
   font-size: 0.9em;
   text-transform: uppercase;
 }
-#magazine {
+.magazine {
   color: gray;
 }
 
