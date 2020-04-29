@@ -1,7 +1,9 @@
 @media only screen and (max-width: 500px) {
-  #sorting,
   #login,
-  .header-left li + li {
+  aside,
+  .header-left li + li,
+  .main-no-sorting-mobile,
+  .hr-line {
     display: none;
   }
 
@@ -31,7 +33,7 @@
 
   /* ============================== main page ============================= */
   .carousel {
-    margin: 0;
+    margin: 5.5em 0 3em 0;
     width: 150%;
   }
 
@@ -43,6 +45,33 @@
   }
 
   /* ========================= Product Listing Page  ========================== */
+
+  /* ============= sorting ================= */
+  .plp-mobile-sorting,
+  input[type="text"] {
+    position: absolute;
+    width: 80vw;
+    left: 2.5%;
+  }
+
+  .plp-mobile-sorting {
+    top: 60%;
+    background-position-x: 70vw;
+    background-position-y: 2.5vh;
+  }
+
+  input[type="text"] {
+    top: 10%;
+  }
+
+  div.plp-inputs-mobile {
+    position: relative;
+    height: 20vh;
+    margin: 0 2em 3em 2em;
+    /* background-color: lavender; */
+  }
+
+  /* ================= plp products ================*/
   section {
     margin: 0;
     padding: 1em;
@@ -64,10 +93,25 @@
     margin-bottom: -2.4em;
   }
 
-  aside {
-    display: none;
+  /* ================= pagination ==================== */
+
+  ul.pagination {
+    margin: 0 1em;
   }
 
+  .page {
+    margin-right: 5em;
+  }
+
+  .page-active {
+    background-color: black;
+    color: white;
+    width: 2em;
+    height: 2em;
+    padding: 1em;
+  }
+
+  /* =============================== footer ================================== */
   footer {
     display: flex;
     flex-direction: column-reverse;
