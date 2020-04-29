@@ -1,0 +1,47 @@
+@media only screen and (max-width: 600px) {
+  #sorting {
+    display: none;
+  }
+
+  .carousel {
+    margin: 0;
+    width: 150%;
+  }
+
+  .carousel-text > h1 {
+    font-size: 1.5em;
+  }
+  .carousel-text > p {
+    font-size: 1.3em;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 0.9em;
+    font-style: normal;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #22232b;
+    margin: 1em 4em;
+    /* background-color: grey; */
+  }
+
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    margin: 3em;
+  }
+
+  .footer-nav ul {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1em;
+    margin: 1em 0;
+    font-size: 1em;
+  }
+
+  .footer-nav li {
+    margin: 1em -0.5em;
+  }
+}

@@ -91,10 +91,8 @@ const renderCart = () => {
 let currentSlide = 0;
 const slideCount = 4;
 
-const slideshow = document.querySelector(".slideshow");
-const slides = slideshow.querySelectorAll(".slide");
-
 const setupCarousel = () => {
+  const slideshow = document.querySelector(".slideshow");
   const slideNext = slideshow.querySelectorAll(".slide-next");
   const slidePrevious = slideshow.querySelector(".slide-previous");
   slideNext.forEach((el) => el.addEventListener("click", nextSlide));
@@ -120,6 +118,8 @@ const nextSlide = () => {
 };
 
 const changeSlide = () => {
+  const slideshow = document.querySelector(".slideshow");
+  const slides = slideshow.querySelectorAll(".slide");
   slides.forEach((div, index) => {
     if (index === currentSlide) {
       div.classList.remove("slide-disappear", "slide-hidden");
