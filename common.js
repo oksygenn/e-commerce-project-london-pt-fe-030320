@@ -2,7 +2,7 @@ const header = `
     <nav>
           <ul class="header-left">
             <li><img class="logo hamburger" src="images/Logo.png" alt="logo" /></li>
-            <li><a href="main_page.html" id="home">Home</a></li>
+            <li><a href="index.html" id="home">Home</a></li>
             <li><a href="plp.html" id="shop">Shop</a></li>
             <li><a href="#" id="magazine" class="magazine">Magazine</a></li>
           </ul>
@@ -11,7 +11,7 @@ const header = `
           <ul>
             <li><img class="logo-mobile" src="images/logo-white.png" alt="logo" /></li>
             <li><img class="cancel-button hamburger" src="images/cancel-button-white.png" alt="logo" /></li>
-            <li class="mobile-nav-item"><a href="main_page.html" id="home">Home</a></li>
+            <li class="mobile-nav-item"><a href="index.html" id="home">Home</a></li>
             <li class="mobile-nav-item"><a href="plp.html" id="shop">Shop</a></li>
             <li class="mobile-nav-item"><a href="#" id="magazine">Magazine</a></li>
           </ul>
