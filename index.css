@@ -149,8 +149,8 @@ section {
 
 .product {
   position: relative;
-  max-width: 250px;
-  min-width: 150px;
+  /* max-width: 250px; */
+  /* min-width: 150px; */
   padding-bottom: 2em;
 }
 
